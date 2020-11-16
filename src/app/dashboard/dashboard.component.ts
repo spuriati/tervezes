@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import { Hero } from '../hero';
 import { HeroService } from '../hero.service';
 
@@ -7,6 +7,7 @@ import { HeroService } from '../hero.service';
   templateUrl: './dashboard.component.html',
   styleUrls: [ './dashboard.component.css' ]
 })
+
 export class DashboardComponent implements OnInit {
   heroes: Hero[] = [];
 

@@ -95,10 +95,11 @@ describe('WelcomeComponent (with beforeEach)', () => {
     expect(component).toBeDefined();
   });
 
-  // it('should contain "Welcome, Sam Spade"', () => {
-  //   const welcomeElement: HTMLElement = fixture.nativeElement;
-  //   expect(welcomeElement.textContent).toContain('Welcome, Sam Spade');
-  // });
+  it('should contain "Welcome, Test User"', () => {
+    fixture.detectChanges();
+    const welcomeElement: HTMLElement = fixture.nativeElement;
+    expect(welcomeElement.querySelector('i').textContent).toContain('Welcome, Test User');
+  });
 
   it('should not have welcome message after construction', () => {
     expect(comp.welcome).toBeUndefined();
